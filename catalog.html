@@ -5,51 +5,60 @@
     <title>HTML Academy: Девайс</title>
 </head>
 <body>
-    <header>
-        <h2 class="visually-hidden">Меню сайта</h2>    
-        <nav class="navigation">
-        <a class="navigation-logo" href="index.html">
-          <img class="logo" alt="Логотип магазина device" src="#">
-        </a>
-          <ul class="navigation-list">  <!-- Навигация  -->
-            <li class="navigation-item downlist"><a class=" navigation-link navigation-link-current" href="#">Каталог товаров </a>
-            <!-- Начало вложенного списка -->
-              <ul class="downlist-product">
-                <li><a class="downlist-product-item" href="#">Виртуальная реальность</a></li>
-                <li><a class="downlist-product-item" href="#">Моноподы для cелфи</a></li>
-                <li><a class="downlist-product-item" href="#">Экшн-камеры</a></li>
-              </ul>
-              <ul class="downlist-product">
-                <li><a class="downlist-product-item" href="#">Фитнес-браслеты</a></li>
-                <li><a class="downlist-product-item" href="#">Умные часы</a></li>
-              </ul>
-              <ul class="downlist-product">
-                <li><a class="downlist-product-item" href="#">Квадрокоптеры</a></li>
-              </ul>
-            </li> <!-- Конец вложенного списка -->
-            <li class="open-button"> <!-- Кнопка раскрывающая список -->
-              <button type="button" class="open" id="open" style="background: url(myimage.png)">Кнопка раскрывающая список</button>
-            </li>                                                                          
-            <li class="navigation-item"><a class="navigation-link" href="">Доставка</a></li>
-            <li class="navigation-item"><a class="navigation-link" href="">Гарантия</a></li>
-            <li class="navigation-item"><a class="navigation-link" href="">Контакты</a></li>
-          </ul>
-          <ul class="navigation-list navigation-user"> <!-- Навигация для юзера  -->
-            <li class="navigation-user-item"><input type="search" name="search" id="search" placeholder="Поиск по сайту"></li> <!-- Поле поиска -->
-            <li class="navigation-user-item"><a class="navigation-user-item" href="#">Войти</a></li>
-            <li class="navigation-user-item"><a class="navigation-user-item" href="#">Сравнить</a></li>
-            <li class="navigation-user-item"><button type="button" class="shop-cart" id="shop-cart">Корзина</button></li> <!-- Кнопка открывающая корзину -->
-          </ul>
-        </nav>
-      </header>
+  <header>
+    <h2 class="visually-hidden">Меню сайта</h2>       
+      <a class="navigation-logo"> <!-- Исправление   -->
+        <img class="logo" alt="Логотип магазина device" src="#">
+      </a>
+      <nav class="navigation"> <!-- Убираю лишнюю лишнюю вложенность, исправление -->
+        <ul class="navigation-list navigation-user"> <!-- Перенёс навигацию для юзера выше -->
+        <li class="navigation-user-item">
+        <form action="https://echo.htmlacademy.ru" method="GET">
+          <input type="search" name="search" id="search" placeholder="Поиск по сайту">
+        </form> <!-- Обернул в тег Form, исправление -->
+        </li> <!-- Поле поиска -->
+        <li class="navigation-user-item">
+          <a class="navigation-user-item" href="#">Войти</a>
+        </li>
+        <li class="navigation-user-item">
+          <a class="navigation-user-item" href="#">Сравнить</a>
+        </li>
+        <li class="navigation-user-item">
+          <button type="button" class="shop-cart" id="shop-cart">Корзина</button>
+        </li> <!-- Кнопка открывающая корзину -->
+      </ul>
+      <ul class="navigation-list">  <!-- Навигация  -->
+        <li class="navigation-item downlist">
+          <a class="navigation-link" href="#">
+            <img class="plus-minus" alt="Кнопка выпадающего меню" src="#">Каталог товаров
+           </a> <!-- Исправление и добавил картинку к ссылке -->
+          </li><!-- Убрал выпадающий список, исправление -->                                                                       
+        <li class="navigation-item">
+          <a class="navigation-link" href="">Доставка</a>
+        </li>
+        <li class="navigation-item">
+          <a class="navigation-link" href="">Гарантия</a>
+        </li>
+        <li class="navigation-item">
+          <a class="navigation-link" href="">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
       <main class="main-inner">
           <header class="innder-header">
               <h1 class="innet-header-title">Моноподы для селфи</h1>
               <ul class="breadcrumbs">
-               <li class="breadcrumbs-item"><a class="breadcrumbs-link" href="index.html">Главная</a></li>
-               <li class="breadcrumbs-item"><a class="breadcrumbs-link" href="#">Каталог товаров</a></li>
-               <li class="breadcrumbs-item"><a class="breadcrumbs-link">Моноподы для селфи</a></li>
+               <li class="breadcrumbs-item">
+                 <a class="breadcrumbs-link" href="index.html">Главная</a>
+                </li>
+               <li class="breadcrumbs-item">
+                 <a class="breadcrumbs-link" href="#">Каталог товаров</a>
+                </li>
+               <li class="breadcrumbs-item">
+                 <a class="breadcrumbs-link">Моноподы для селфи</a>
+                </li>
               </ul>
           </header>
           <section class="catalog-products">
@@ -66,43 +75,52 @@
                   </button>
                   
                  <label class="catalog-filter-label"> от
-                  <input class="catalog-filter-input" type="number" name="min-price"> ₽
+                  <input class="catalog-filter-input" type="number" name="min-price"> <!-- Убрал знак рубля, исрпавление -->
                  </label>
 
                  <label class="catalog-filter-label"> до
-                    <input class="catalog-filter-input" type="number" name="max-price"> ₽
+                    <input class="catalog-filter-input" type="number" name="max-price"> 
                    </label>
             </fieldset>
 
             <fieldset> <!-- Чекбоксы -->
                 <legend class="catalog-filter-title">Цвет</legend>
                 <ul class="catalog-filter-list">
-                  <li class="catalog-filter-item"><label class="control">
+                  <li class="catalog-filter-item">   <!-- Исправил отступы(?) вроде -->
+                    <label class="control">
                     <input class="visually-hidden control-input" type="checkbox" name="Black" checked>
                     <span class="control-mark"></span>
                     <span class="control-label">Черный</span>
                     </label>
                   </li>
-                  <li class="catalog-filter-item"><label class="control">
+                  <li class="catalog-filter-item">
+                    <label class="control">
                     <input class="visually-hidden control-input" type="checkbox" name="White" checked>
                     <span class="control-mark"></span>
                     <span class="control-label">Белый</span>
-                   </label></li>
-                  <li class="catalog-filter-item"><label class="control">
+                   </label>
+                  </li>
+                  <li class="catalog-filter-item">
+                    <label class="control">
                     <input class="visually-hidden control-input" type="checkbox" name="Blue">
                     <span class="control-mark"></span>
                     <span class="control-label">Синий</span>
-                   </label></li>
-                  <li class="catalog-filter-item"><label class="control">
+                   </label>
+                  </li>
+                  <li class="catalog-filter-item">
+                    <label class="control">
                     <input class="visually-hidden control-input" type="checkbox" name="Red">
                     <span class="control-mark"></span>
                     <span class="control-label">Красный</span>
-                   </label></li>
-                  <li class="catalog-filter-item"><label class="control">
+                   </label>
+                  </li>
+                  <li class="catalog-filter-item">
+                    <label class="control">
                     <input class="visually-hidden control-input" type="checkbox" name="Pink">
                     <span class="control-mark"></span>
                     <span class="control-label">Розовый</span>
-                   </label></li>
+                   </label>
+                  </li>
                 </ul>
             </fieldset>
 
@@ -129,17 +147,21 @@
                <label class="visually-hidden" for="sorting">Сортировка</label>
                <select class="select-control" id="sorting" name="sorting">
                    <option value="popular">Сначала популярные</option>
-               </select>
-               <button class="visually-hidden" type="submit">Отсортировать товар</button>
+               </select> <!-- Убрал кнопку, исправление -->
            </form>
-           <h3 class="button-sort-title">Сортировка</h3>
+           <ul class="button-sort-list"> <!-- Убрал заголовок, исправление -->
+             <li class="button-sort-item">
            <a href="#" class="button button-sort-up">
                <span class="visually-hidden">По возрастанию</span>
            </a>
+             </li>
+             <li class="button-sort-item">
            <a href="#" class="button button-sort-down">
                <span class="visually-hidden">По убыванию</span>
            </a>
-            
+            </li>
+           </ul>
+
            <ul class="product-list">
            <li class="product-card">
                <a class="product-card-link" href="#">
@@ -170,11 +192,13 @@
          
          <button class="button pagination-show-more" type="button">Загрузить еще</button>
 
-         <ul class="pagination">
-             <li class="pagination-item"> <!-- Для примера дизейблд, типа на самой первой странице? -->
+         
+             <div class="pagination-item-back"> <!-- Для примера дизейблд, типа на самой первой странице? -->
                  <a class="pagination-link pagination-prev pagination-disabled" href="#">
                  <span class="pagination-back">Назад</span>
                 </a>
+             </div>
+            <ul class="pagination">
              </li>
              <li class="pagination-item">
                  <a class="pagination-link" href="#">1</a>
@@ -191,13 +215,12 @@
              <li class="pagination-item">
                 <a class="pagination-link" href="#">15</a>
              </li>
-             <li class="pagination-item">
+          </ul>
+             <div class="pagination-item-next">
                  <a class="pagination-link pagination-next" href="#">
-                     <span class="pagination-next">Вперед</span>
+                     <span class="pagination-next">Вперед</span> <!-- Отдельно разметил вперёд и назад -->
                 </a>
-            </li>
-
-         </ul>
+             </div>
           </section>
       </main>
 
@@ -214,9 +237,15 @@
         <section class="footer-services">
           <h2 class="visually-hidden">Cсылки на услуги магазина</h2>
           <ul class="footer-services-list">
-            <li class="footer-services-item"><a href="#">Доставка</a></li>
-            <li class="footer-services-item"><a href="#">Гарантия</a></li>
-            <li class="footer-services-item"><a href="#">Контакты</a></li>
+            <li class="footer-services-item">
+              <a href="#">Доставка</a>
+            </li>
+            <li class="footer-services-item">
+              <a href="#">Гарантия</a>
+            </li>
+            <li class="footer-services-item">
+              <a href="#">Контакты</a>
+            </li>
           </ul>
         </section>
   
@@ -243,12 +272,12 @@
                 <span class="visually-hidden">Твиттер</span>
               </a>
             </li>
-            <li class="footer-social-item">
+          </ul>
+            <div class="footer-social-academy"> <!-- Выделил из списка сайт академии, исправление  -->
               <a class="#" href="#">
                 <img src="#" alt="Сайт Академии">
               </a>
-            </li>
-          </ul>
+            </div>
         </section>
   
       </footer>
