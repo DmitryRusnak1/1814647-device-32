@@ -7,135 +7,159 @@
   <body>
 <header>
   <h2 class="visually-hidden">Меню сайта</h2>       
-  <nav class="navigation">
-    <a class="navigation-logo" href="index.html">
+    <a class="navigation-logo"> <!-- Исправление   -->
       <img class="logo" alt="Логотип магазина device" src="#">
     </a>
-    <ul class="navigation-list">  <!-- Навигация  -->
-      <li class="navigation-item downlist"><a class="navigation-link" href="#">Каталог товаров </a><!-- Начало вложенного списка -->
-        <ul class="downlist-product">
-          <li><a class="downlist-product-item" href="#">Виртуальная реальность</a></li>
-          <li><a class="downlist-product-item" href="#">Моноподы для cелфи</a></li>
-          <li><a class="downlist-product-item" href="#">Экшн-камеры</a></li>
-        </ul>
-        <ul class="downlist-product">
-          <li><a class="downlist-product-item" href="#">Фитнес-браслеты</a></li>
-          <li><a class="downlist-product-item" href="#">Умные часы</a></li>
-        </ul>
-        <ul class="downlist-product">
-          <li><a class="downlist-product-item" href="#">Квадрокоптеры</a></li>
-        </ul>
-      </li><!-- Конец вложенного списка -->
-      <li class="open-button"> <!-- Кнопка раскрывающая список -->
-        <button type="button" class="open" id="open" style="background: url(myimage.png)">Кнопка раскрывающая список</button>
-      </li>                                                                          
-      <li class="navigation-item"><a class="navigation-link" href="">Доставка</a></li>
-      <li class="navigation-item"><a class="navigation-link" href="">Гарантия</a></li>
-      <li class="navigation-item"><a class="navigation-link" href="">Контакты</a></li>
+    <nav class="navigation"> <!-- Убираю лишнюю лишнюю вложенность, исправление -->
+      <ul class="navigation-list navigation-user"> <!-- Перенёс навигацию для юзера выше -->
+      <li class="navigation-user-item">
+      <form action="https://echo.htmlacademy.ru" method="GET">
+        <input type="search" name="search" id="search" placeholder="Поиск по сайту">
+      </form> <!-- Обернул в тег Form, исправление -->
+      </li> <!-- Поле поиска -->
+      <li class="navigation-user-item">
+        <a class="navigation-user-item" href="#">Войти</a>
+      </li>
+      <li class="navigation-user-item">
+        <a class="navigation-user-item" href="#">Сравнить</a>
+      </li>
+      <li class="navigation-user-item">
+        <button type="button" class="shop-cart" id="shop-cart">Корзина</button>
+      </li> <!-- Кнопка открывающая корзину -->
     </ul>
-    <ul class="navigation-list navigation-user"> <!-- Навигация для юзера  -->
-      <li class="navigation-user-item"><input type="search" name="search" id="search" placeholder="Поиск по сайту"></li> <!-- Поле поиска -->
-      <li class="navigation-user-item"><a class="navigation-user-item" href="#">Войти</a></li>
-      <li class="navigation-user-item"><a class="navigation-user-item" href="#">Сравнить</a></li>
-      <li class="navigation-user-item"><button type="button" class="shop-cart" id="shop-cart">Корзина</button></li> <!-- Кнопка открывающая корзину -->
+    <ul class="navigation-list">  <!-- Навигация  -->
+      <li class="navigation-item downlist">
+        <a class="navigation-link" href="#">
+          <img class="plus-minus" alt="Кнопка выпадающего меню" src="#">Каталог товаров
+         </a> <!-- Исправление и добавил картинку к ссылке -->
+        </li><!-- Убрал выпадающий список, исправление -->                                                                       
+      <li class="navigation-item">
+        <a class="navigation-link" href="">Доставка</a>
+      </li>
+      <li class="navigation-item">
+        <a class="navigation-link" href="">Гарантия</a>
+      </li>
+      <li class="navigation-item">
+        <a class="navigation-link" href="">Контакты</a>
+      </li>
     </ul>
   </nav>
 </header> <!-- Хедер завершен -->
 
     <main class="main-index">
        <h1 class="visually-hidden">Магазин гаджетов "device"</h1>
-       <section class="description">  <!-- Секция описания товара со слайд-переключателем Секция 1 -->
+       <section class="gadgets">  <!-- Меняю клас, исправление -->
         <h2 class="visually-hidden">Описание товара</h2>
-        <ul class="gadgets">
-         <li class="quadcopter"> <!-- Квадрокоптер -->
+        
+         <section class="gadgets-item"> <!-- Убираю список, исправление -->
            <img src="#" alt="Квадрокоптер">
            <h2 class="gadget-heading">Порхает как бабочка,жалит как пчела!</h2>
            <p class="gadget-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
            <a class="more" href="#">Подробнее</a>
-           <p class="gadget-text-1"><b>800 м </b><br>Дальность полета</p>  <!-- Или поменять на спаны с болдами(?) -->
-           <p class="gadget-text-2"><b>50 м </b><br>Радиус поражения</p>  
-         </li>
-        </ul>                             <!-- Незаконченный список, куда потом так же будут 
-                                          входить умные часы и селфи-палки, оставил один пункт, 
-                                          чтобы понять подойдет ли вообще такая разметка -->
-         <ol class="slider-pagination">
+         </section>
+        
+        <ul class="stats-list"> <!-- Сделал список для характеристок, исправление -->
+           <li class="stats-list-item-">
+             <span class="stats-item-bold">800 м </span>
+             <span class="stats-item-text">Дальность полета</span>
+            </li>  <!-- Или поменять на спаны с болдами(?) -->
+           <li class="stats-list-item">
+             <span class="stats-item-bold">50 м </span>
+             <span class="stats-item-text">Радиус поражения</span>
+          </li>
+        </ul>
+                                    
+         <ul class="slider-pagination"> <!-- Поменял на марикрованный список, исправление -->
            <li class="slider-pagination-item">
-             <button class="sldier-pagination-button sldier-pagination-button-current"
+             <button class="slider-pagination-button slider-pagination-button-current"
              type="button">
              <span class="visually-hidden">1-й товар</span>
             </button>
            </li>
            <li>
-            <button class="sldier-pagination-button sldier-pagination-button-current"
+            <button class="slider-pagination-button slider-pagination-button-current"
             type="button">
             <span class="visually-hidden">2-й товар</span>
            </button>
            </li>
            <li>
-            <button class="sldier-pagination-button sldier-pagination-button-current"
+            <button class="slider-pagination-button slider-pagination-button-current"
             type="button">
             <span class="visually-hidden">3-й товар</span>
            </button>
            </li>
-         </ol>                 
+          </ul>                 
        </section>
 
        <section class="product-types"> <!-- Виды товаров Секция 2--> 
         <h2 class="visually-hidden">Виды товаров</h2>
-        <ul class="product-types-list">
-          <li class="product-types-item">
+        <ul class="product-types-list"> 
+          <li class="product-types-item"> <!-- Оборачиваю в ссылки, исправление -->
+            <a class="product-types-link" href="#">
             <img src="#" alt="Виртуальная реальность">
-            <p>Виртуальная реальность</p>    
+            <p>Виртуальная реальность</p>
+            </a>   
           </li>
           <li class="product-types-item">
-            <img src="#" alt="Моноподы 
-            для селфи">
-            <p>Моноподы для селфи</p>   
+          <a class="product-types-link" href="#">
+            <img src="#" alt="Моноподы для селфи">
+            <p>Моноподы для селфи</p>
+          </a>   
           </li>
           <li class="product-types-item">
+          <a class="product-types-link" href="#">
             <img src="#" alt="Экшн-камеры">
             <p>Экшн-камеры</p>
+          </a>
           </li>
           <li class="product-types-item">
+          <a class="product-types-link" href="#">
             <img src="#" alt="Фитнес-браслеты">
             <p>Фитнес-браслеты</p>
+          </a>
           </li>
           <li class="product-types-item">
+          <a class="product-types-link" href="#">
             <img src="#" alt="Умные часы">
             <p>Умные часы</p>
+          </a>
           </li>
           <li class="product-types-item">
+          <a class="product-types-link" href="#">
             <img src="#" alt="Квадрокоптеры">
             <p>Квадрокоптеры</p>
+          </a>
           </li>
         </ul>
        </section>
 
        <section class="services"> <!-- Сервисы Секция 3-->
-         <h2 class="visually-hidden">Сервисы</h2>
+         <h2 class="visually-hidden">Сервисы</h2>  <!-- Обернул в список и сделал блок с текстами, исправление -->
          <ul class="services-list">
-          <li class="services-item">Доставка
-            <h3 class="services-title">Доставка</h3>
-            <p class="services-description">Мы с удовольствием доставим ваш товар прямо
+          <li class="services-item">
+            <button type="button" class="services-item-button">Доставка</button>
+          </li>
+          <li class="services-item">
+            <button type="button" class="services-item-button">Гарантия</button>
+          </li>
+          <li class="services-item">
+            <button type="button" class="services-item-button">Кредит</button>
+          </li>
+         </ul>
+         <div class="services-slides">
+           <p class="services-slides-item">Мы с удовольствием доставим ваш товар прямо
               к вашему подъезду совершенно бесплатно! Ведь
               мы неплохо заработаем, поднимая его на ваш этаж.
             </p>
-          </li>
-          <li class="services-item">Гарантия
-            <h3 class="services-title">Гарантия</h3>
-            <p class="services-description">Если из-за возгорания купленного у нас товара у вас
+           <p class="services-slides-item">Если из-за возгорания купленного у нас товара у вас
               сгорит дом — не переживайте, мы выдадим вам новый.
               Товар, не дом, конечно же.
             </p>
-          </li>
-          <li class="services-item">Кредит
-            <h3 class="services-title">Кредит</h3>
-            <p class="services-description">Залезть в долговую яму стало проще!
+            <p class="services-slides-item">Залезть в долговую яму стало проще!
              Кредитные консультанты подберут для вас наиболее выгодные условия кредита. 
              Выгодные для банка, разумеется.
             </p>
-          </li>
-         </ul>
+         </div>
        </section>
 
        <section> <!-- Редкий заказ Секция 4 -->   <!-- Или завернуть в div? -->
@@ -144,14 +168,19 @@
        </section>
 
        <section class="about-us"> <!-- О нас Секция 5 -->
-         <h2 class="about-us-title">О нас</h2>
-         <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.<br>
-         <br>
-         Мы можем доставить ваш товар в самые отдалённые уголки России транспортными компаниями:</p>
+         <h2 class="about-us-title">О нас</h2>  <!-- Убрал отступы и поместил в два параграфа, исправление -->
+         <p class="about-us-text">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+         <p class="about-us-text">Мы можем доставить ваш товар в самые отдалённые уголки России транспортными компаниями:</p>
          <ul class="about-us-list">
-           <li class="about-us-item"><a href="#" title="Фирма Меловые линии">Меловые линии</a></li>
-           <li class="about-us-item"><a href="#" title="Фирма СДИК">СДИК</a></li>
-           <li class="about-us-item"><a href="#" title="Фирма ТоксБерри">ТоксБерри</a></li>
+           <li class="about-us-item">
+             <a href="#" title="Фирма Меловые линии">Меловые линии</a>
+            </li>
+           <li class="about-us-item">
+             <a href="#" title="Фирма СДИК">СДИК</a>
+            </li>
+           <li class="about-us-item">
+             <a href="#" title="Фирма ТоксБерри">ТоксБерри</a>
+            </li>
          </ul>
          <a class="button button-about-us" href="#" title="Ссылка в раздел описания компании">Подробнее о нас</a>
         </section>
@@ -181,6 +210,7 @@
            <input type="text" name="subscribe-mail" placeholder="Ваш e-mail">
            <button class="button-subscribe" type="submit">Подписаться</button>
           </form>
+          <span class="subscribe-free">Это бесплатно</span> <!-- Добавил span после формы, исправление -->
        </section>
     </main>
 
@@ -197,9 +227,15 @@
       <section class="footer-services">
         <h2 class="visually-hidden">Cсылки на услуги магазина</h2>
         <ul class="footer-services-list">
-          <li class="footer-services-item"><a href="#">Доставка</a></li>
-          <li class="footer-services-item"><a href="#">Гарантия</a></li>
-          <li class="footer-services-item"><a href="#">Контакты</a></li>
+          <li class="footer-services-item">
+            <a href="#">Доставка</a>
+          </li>
+          <li class="footer-services-item">
+            <a href="#">Гарантия</a>
+          </li>
+          <li class="footer-services-item">
+            <a href="#">Контакты</a>
+          </li>
         </ul>
       </section>
 
@@ -226,12 +262,12 @@
               <span class="visually-hidden">Твиттер</span>
             </a>
           </li>
-          <li class="footer-social-item">
+        </ul>
+          <div class="footer-social-academy"> <!-- Выделил из списка сайт академии, исправление  -->
             <a class="#" href="#">
               <img src="#" alt="Сайт Академии">
             </a>
-          </li>
-        </ul>
+          </div>
       </section>
 
     </footer>
