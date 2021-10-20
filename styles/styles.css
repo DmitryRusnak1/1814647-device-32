@@ -1,6 +1,7 @@
 * {
     padding: 0px;
     margin: 0px;
+    box-sizing: border-box;
 }
 /* Подключаю стиль Rubik */
 @font-face {
@@ -41,7 +42,6 @@ html {
 }
 
 body {
-    margin: 0;
     display: flex;
     flex-direction: column;
     min-height: 100%;
@@ -168,8 +168,6 @@ margin-left: 14px;
     margin: 0 auto;
 }
 .product-types-list {
-    margin: 0;
-    padding: 0;
     display: flex;
 }
 
@@ -258,7 +256,6 @@ margin-left: 14px;
 
 .footer-social::before {
     content: "";
-    margin: 0;
     width: 80px;
     height: 7px;
     background: #FFC700;
@@ -268,7 +265,6 @@ margin-left: 14px;
     display: flex;
     width: 150px;
     padding 0;
-    margin: 0;
     margin-left: 425px;
     margin-right: 392px;
 }
@@ -513,8 +509,6 @@ margin-left: 14px;
 
 .footer-services-list {
     display: flex;
-    padding: 0;
-    margin: 0;
     list-style-type: none;
 }
 
