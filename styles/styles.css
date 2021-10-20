@@ -1,6 +1,4 @@
-* {
-    padding: 0px;
-    margin: 0px;
+*, *::before, *::after {
     box-sizing: border-box;
 }
 /* Подключаю стиль Rubik */
@@ -169,6 +167,8 @@ margin-left: 14px;
 }
 .product-types-list {
     display: flex;
+    padding: 0;
+    margin: 0;
 }
 
 .services {
@@ -185,9 +185,9 @@ margin-left: 14px;
 
 .us-contacts-container {
     display: flex;
-    margin-top: 97px;
     width: 1160px;
     margin: 0 auto;
+    margin-top: 97px;
     justify-content: space-between;
 }
 
@@ -214,10 +214,6 @@ margin-left: 14px;
 
 .subscribe-form {
     width: 856px;
-}
-
-.product-types-item {
-    margin-right: 40px;
 }
 
 .product-types-item:last-child {
@@ -264,8 +260,8 @@ margin-left: 14px;
 .footer-social-list {
     display: flex;
     width: 150px;
-    margin-left: 425px;
-    margin-right: 392px;
+    margin: 0;
+    padding: 0;
 }
 
 .footer-phone {
@@ -279,6 +275,8 @@ margin-left: 14px;
 
 .catalog-products {
     display: flex;
+    width: 1160px;
+    margin: 0 auto;
 }
 
 .catalog-filter {
@@ -335,8 +333,8 @@ margin-left: 14px;
 }
 
 .product-types-item {
-    width: 160px;
     height: 160px;
+    margin-right: 40px;
     background-color: #FFE17F;
 }
 
@@ -509,6 +507,8 @@ margin-left: 14px;
 .footer-services-list {
     display: flex;
     list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 .footer-services-item {
@@ -521,10 +521,6 @@ margin-left: 14px;
 
 .footer-contacts {
     margin-right: auto;
-}
-
-.footer-social-academy {
-    margin-left: auto;
 }
 
 .footer-contacts-phone {
@@ -559,7 +555,17 @@ margin-left: 14px;
 }
 
 /* Breadcrumbs */
+.breadcrumbs-container {
+  width: 1160px;
+  margin: 0 auto;
+}
+
 .breadcrumbs {
+    display: flex;
+    justify-content: space-between;
+    width: 425px;
+    margin: 0;
+    padding: 0;
     color: #000000;
     list-style-type: none;
   }
@@ -590,11 +596,6 @@ margin-left: 14px;
       color: #000000;
       text-transform: uppercase;
   }
-
-/* Контейнер для заголовка фильтра, чтобы изменить фон */
-.catalog-filter-container {
-    background-color: #DCDCDC;
-}
 
 .control-label {
 font-family: Rubik;
@@ -631,6 +632,8 @@ background-color: #EBEBEB;
 
 .product-list {
  list-style-type: none;
+ padding: 0;
+ margin: 0;
 }
 .product-card-link {
     text-decoration: none;
