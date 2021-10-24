@@ -90,6 +90,7 @@ header {
 .navigation-user, 
 .navigation-list {
  display: flex;
+ flex-wrap: wrap;
  list-style: none;
 }
 
@@ -168,6 +169,20 @@ margin-left: 14px;
     margin-left: 40px;
 }
 
+.stats-list {
+ margin-top: 70px;
+}
+
+.stats-list-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.stats-item-big {
+    width: 160px;
+    height: 52px;
+}
+
 .stats-list-item:first-child {
     margin-right: 20px;
 }
@@ -175,9 +190,13 @@ margin-left: 14px;
 .product-types-container {
     width: 1160px;
     margin: 0 auto;
+    margin-top: 109px;
 }
+
 .product-types-list {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     padding: 0;
     margin: 0;
 }
@@ -226,10 +245,6 @@ margin-left: 14px;
 
 .subscribe-form {
     width: 856px;
-}
-
-.product-types-item:last-child {
-    margin-right: 0;
 }
  
 .services-container {
@@ -298,8 +313,7 @@ margin-left: 14px;
 }
 
 .catalog-filter {
-    width: 468px;
-    margin-right: 72px;
+    width: 200px;
 }
 
 .catalog-right-column {
@@ -350,19 +364,40 @@ margin-left: 14px;
     color: #444444;
 }
 
-.product-types-item {
-    height: 160px;
-    margin-right: 40px;
-    background-color: #FFE17F;
+.selfie-monopods {
+    margin: 0;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+}
+
+.produtc-types-picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 160px;
+  background-color: #FFE17F;
+}
+
+.product-types-name-box {
+  width: 160px;
+  height: 60px;
+  margin-top: 33px;
+}
+
+.product-types-link {
+  text-decoration: none;
 }
 
 .product-types-name {
    font-family: "Raleway", sans-serif;
 
    font-weight: 800;
+   font-size: 18px;
    line-height: 24px;
+   letter-spacing: -0.02em;
    color: #000000;
-   text-decoration: none;
 }
  
 .services-item-button {
@@ -403,7 +438,7 @@ margin-left: 14px;
 
     font-weight: 800;
     font-size: 20px;
-    line-height: 23,5px;
+    line-height: 23px;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -563,7 +598,6 @@ margin-left: 14px;
 
 .footer-contacts {
     margin-right: auto;
-    margin-bottom: 66px;
 }
 
 .footer-contacts-phone {
@@ -785,5 +819,6 @@ background-color: #EBEBEB;
 }
 
 .catalog-container {
+margin-right: 72px;
 background-color: #EBEBEB;
 }
