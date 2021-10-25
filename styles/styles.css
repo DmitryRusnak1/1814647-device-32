@@ -365,13 +365,10 @@ margin-left: 14px;
 }
 
 .selfie-monopods {
-    margin: 0;
-    margin-right: auto;
-    margin-left: auto;
     margin-top: 50px;
 }
 
-.produtc-types-picture {
+.product-types-picture {
   display: flex;
   justify-content: center;
   align-items: center;
