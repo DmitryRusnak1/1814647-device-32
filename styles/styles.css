@@ -735,6 +735,12 @@ background-color: #EBEBEB;
     flex-direction: column;
 }
 
+.product-card-image {
+    object-fit: cover;
+    width: 360px;
+    height: 380px;
+}
+
 .product-card-flex {
     display: flex;
     justify-content: space-between;
@@ -757,7 +763,6 @@ background-color: #EBEBEB;
 
 .title-flex-container {
     width: 280px;
-    height;
 }
 
 .product-card-price {
