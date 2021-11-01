@@ -300,11 +300,6 @@ margin-left: 14px;
     margin-left: auto;
 }
 
-.button {
-    text-decoration: none;
-    color: #000000;
-}
-
 .catalog-products {
     display: flex;
     width: 1160px;
@@ -314,6 +309,22 @@ margin-left: 14px;
 
 .catalog-filter {
     width: 200px;
+    margin-top: 50px;
+}
+
+.catalog-color-group,
+.catalog-bluetooth-group {
+    margin-top: 12px;
+}
+
+.button {
+    text-decoration: none;
+    color: #000000;
+    
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 .catalog-right-column {
