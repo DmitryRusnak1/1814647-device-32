@@ -95,9 +95,6 @@
             </ul>
           </div>
         </div>
-        <div class="big-numbers">
-            <span class="big-number">01</span>
-        </div>
       </nav>
     </header>
     <main class="main-container main-index">
@@ -105,55 +102,58 @@
       <section class="gadgets">
         <h2 class="visually-hidden" hidden>Описание товара</h2>
         <section class="gadgets-item">
-          <div class="gadget-container-pic">
-            <button type="button" class="slider-back slider">
-              <svg width="20" height="60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M20 60h-3.5L0 30 16.5 0H20L3.8 30 20 60Z" fill="#000"/>
-              </svg>
-            </button>
-          <img src="images/slides/main_products/quadrocopter.jpg" alt="Квадрокоптер" class="quadrocopter" width="560" height="560">
-            <button type="button" class="slider-next slider">
-              <svg width="20" height="60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 60h3.5L20 30 3.5 0H0l16.2 30L0 60Z" fill="#000"/>
-              </svg>
-            </button>
-          </div>
-          <div class="gadget-container-description">
-            <h2 class="gadget-heading">Порхает как бабочка, жалит как пчела!</h2>
-            <p class="gadget-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-            <div class="more-pagination">
-              <a class="more" href="#">Подробнее</a>
-              <ul class="slider-pagination">
-                <li class="slider-pagination-item slider-pagination-item-current">
-                  <button class="slider-pagination-button slider-pagination-button-current"
-                    type="button">
-                  <span class="visually-hidden">1-й товар</span>
-                  </button>
+          <span class="gadget-slider-number">01</span>
+          <div class="gadget-slider">
+            <div class="gadget-container-pic">
+              <button type="button" class="slider-back slider">
+                <svg width="20" height="60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 60h-3.5L0 30 16.5 0H20L3.8 30 20 60Z" fill="#000"/>
+                </svg>
+              </button>
+              <img src="images/slides/main_products/slider-1.png" alt="Квадрокоптер" class="quadrocopter" width="560" height="560">
+              <button type="button" class="slider-next slider">
+                <svg width="20" height="60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 60h3.5L20 30 3.5 0H0l16.2 30L0 60Z" fill="#000"/>
+                </svg>
+              </button>
+            </div>
+            <div class="gadget-container-description">
+              <h2 class="gadget-heading">Порхает как бабочка, жалит как пчела!</h2>
+              <p class="gadget-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+              <div class="more-pagination">
+                <a class="more device-btn" href="#">Подробнее</a>
+                <ul class="slider-pagination">
+                  <li class="slider-pagination-item slider-pagination-item-current">
+                    <button class="slider-pagination-button slider-pagination-button-current"
+                      type="button">
+                    <span class="visually-hidden">1-й товар</span>
+                    </button>
+                  </li>
+                  <li class="slider-pagination-item  slider-pagination-item-current">
+                    <button class="slider-pagination-button slider-pagination-button-current"
+                      type="button">
+                    <span class="visually-hidden">2-й товар</span>
+                    </button>
+                  </li>
+                  <li class="slider-pagination-item  slider-pagination-item-current">
+                    <button class="slider-pagination-button slider-pagination-button-current"
+                      type="button">
+                    <span class="visually-hidden">3-й товар</span>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <ul class="stats-list">
+                <li class="stats-list-item">
+                  <span class="stats-item-big">800 м </span>
+                  <span class="stats-item-text">Дальность полета</span>
                 </li>
-                <li class="slider-pagination-item  slider-pagination-item-current">
-                  <button class="slider-pagination-button slider-pagination-button-current"
-                    type="button">
-                  <span class="visually-hidden">2-й товар</span>
-                  </button>
-                </li>
-                <li class="slider-pagination-item  slider-pagination-item-current">
-                  <button class="slider-pagination-button slider-pagination-button-current"
-                    type="button">
-                  <span class="visually-hidden">3-й товар</span>
-                  </button>
+                <li class="stats-list-item">
+                  <span class="stats-item-big">50 м </span>
+                  <span class="stats-item-text">Радиус поражения</span>
                 </li>
               </ul>
             </div>
-            <ul class="stats-list">
-              <li class="stats-list-item">
-                <span class="stats-item-big">800 м </span>
-                <span class="stats-item-text">Дальность полета</span>
-              </li>
-              <li class="stats-list-item">
-                <span class="stats-item-big">50 м </span>
-                <span class="stats-item-text">Радиус поражения</span>
-              </li>
-            </ul>
           </div>
         </section>
       </section>
@@ -241,28 +241,37 @@
         <div class="services-container">
           <ul class="services-list">
             <li class="services-item">
-              <button type="button" class="services-item-button">Доставка</button>
+              <button type="button" class="services-item-button device-btn">Доставка</button>
             </li>
             <li class="services-item">
-              <button type="button" class="services-item-button">Гарантия</button>
+              <button type="button" class="services-item-button device-btn">Гарантия</button>
             </li>
             <li class="services-item">
-              <button type="button" class="services-item-button">Кредит</button>
+              <button type="button" class="services-item-button device-btn">Кредит</button>
             </li>
           </ul>
           <div class="services-slides">
-            <p class="services-slides-item">Мы с удовольствием доставим ваш товар прямо
-              к вашему подъезду совершенно бесплатно! Ведь
-              мы неплохо заработаем, поднимая его на ваш этаж.
-            </p>
-            <p class="services-slides-item">Если из-за возгорания купленного у нас товара у вас
-              сгорит дом — не переживайте, мы выдадим вам новый.
-              Товар, не дом, конечно же.
-            </p>
-            <p class="services-slides-item">Залезть в долговую яму стало проще!
-              Кредитные консультанты подберут для вас наиболее выгодные условия кредита. 
-              Выгодные для банка, разумеется.
-            </p>
+            <div class="services-slide">
+              <h1></h1>
+              <p class="services-slides-item">Мы с удовольствием доставим ваш товар прямо
+                к вашему подъезду совершенно бесплатно! Ведь
+                мы неплохо заработаем, поднимая его на ваш этаж.
+              </p>
+            </div>
+            <div class="services-slide" hidden>
+              <h1></h1>
+              <p class="services-slides-item">Если из-за возгорания купленного у нас товара у вас
+                сгорит дом — не переживайте, мы выдадим вам новый.
+                Товар, не дом, конечно же.
+              </p>
+            </div>
+            <div class="services-slide" hidden>
+              <h1></h1>
+              <p class="services-slides-item">Залезть в долговую яму стало проще!
+                Кредитные консультанты подберут для вас наиболее выгодные условия кредита. 
+                Выгодные для банка, разумеется.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -331,10 +340,10 @@
     </main>
     <footer class="page-footer">
       <div class="common-footer-container">
+       <img class="footer-contacts-logo" src="images/logo-footer.svg" alt="Логотип магазина device" width="145" height="36">
         <div class="footer-container">
           <section class="footer-contacts">
             <h2 class="visually-hidden" hidden>Адрес магазина</h2>
-            <img class="footer-contacts-logo" src="images/logo-footer.svg" alt="Логотип магазина device" width="145" height="36">
             <address class="footer-contacts-adress">
               <p class="footer-contacts-adress-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
             </address>
@@ -343,13 +352,13 @@
             <h2 class="visually-hidden" hidden>Cсылки на услуги магазина</h2>
             <ul class="footer-services-list">
               <li class="footer-services-item">
-                <a href="#">Доставка</a>
+                <a href="#" class="footer-services-link">Доставка</a>
               </li>
               <li class="footer-services-item">
-                <a href="#">Гарантия</a>
+                <a href="#" class="footer-services-link">Гарантия</a>
               </li>
               <li class="footer-services-item">
-                <a href="#">Контакты</a>
+                <a href="#" class="footer-services-link">Контакты</a>
               </li>
             </ul>
           </section>
