@@ -49,7 +49,8 @@ body {
     line-height: 30px;
     color: #242424;
     background-color: #FFFFFF;
-    margin-top: 40px;
+    padding-top: 40px;
+    margin: 0;
 }
 
 .visually-hidden {
@@ -69,36 +70,30 @@ ul {
 
 /* Шапка сайта с навигацией */
    /* Весь хэдэр */
-header {
+.page-header {
     position: relative;
     background-color: #FFE17F;
     color:#000000;
     width: 1160px;
-    margin: 0 auto; 
+    margin: 0 auto;
+    margin-top: 40px;
+    padding: 0 60px; 
 }
-
  /* Общая навигация, внутри верхняя и нижняя строки навигации */
 .navigation {
     display: flex;
     flex-direction: column;
-    width: 1160px;
-    margin: 0 auto;
     margin-top: 34px;
-    padding-bottom: 167px;
 }
 
 .nav-header-top {
     display: flex;
     align-items: baseline;
-    margin: 0 auto;
-    width: 1041px;
 }
 /* Лого */
 .navigation-logo {
-    position: absolute;
-    top: -23px;
-    left: 62px;
-
+    display: block;
+    margin-top: -22px;
 }
 /* Навигация юзера */
 .navigation-user {
@@ -245,12 +240,9 @@ input::placeholder {
 /* Основное меню */
 .nav-header-bottom {
     display: flex;
-    position: relative;
     align-items: center;
     flex-wrap: wrap;
-    margin: 0 auto;
     margin-top: 30px;
-    width: 1160px;
 }
 
 .navigation-list {
@@ -260,12 +252,13 @@ input::placeholder {
     margin: 0;
     padding: 0;
     margin-left: auto;
-    padding-right: 20px;
 }
 
 .navigation-link {
     font-family: "Raleway", sans-serif;
-    padding: 14px 20px 15px;
+    padding: 0;
+    padding-bottom: 9px;
+    margin-right: 20px;
 
     line-height: 21px;
     font-weight: 800;
@@ -286,10 +279,10 @@ input::placeholder {
     line-height: 21px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
+    padding: 0;
 
     border: none;
     background-color: #FFE17F;
-    margin-left: 60px;
     cursor: pointer;
 }
 
@@ -314,8 +307,9 @@ input::placeholder {
     left: 0;
     margin: 0;
     flex-basis: 100%;
-    padding-left: 62px;
     padding-top: 15px;
+    padding-left: 60px;
+    background-color: #FFE17F;
 }
 
 .dropdown-menu-container:hover {
@@ -328,8 +322,8 @@ input::placeholder {
 
 .dropdown-menu {
     display: grid;
-    grid-template-columns: repeat(3, 217px);
-    grid-template-rows: 210px;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: auto;
     margin: 0;
     padding: 0;
 }
@@ -387,18 +381,16 @@ input::placeholder {
 .navigation-link:active {
     opacity: 0.3;
 }
-/* Номер большой картинки */
-.big-numbers {
-    width: 1160px;
-    margin-top: 45px;
-}
+
 /* Main между шапкой и футром */
 
 .main-container {
+    position: relative;
     flex-grow: 1;
 }
 /*  Крупная картинка с описанием */
 .gadgets-item {
+    position: relative;
     width: 1160px;
     margin:0 auto;
 }
@@ -406,21 +398,23 @@ input::placeholder {
 .gadget-slider-number {
     display: flex;
     align-items: center;
-    width: 250px;
+    justify-content: flex-end;
+    width: 100%;
     height: 135px;
     margin-left: auto;
-    border: 1px solid purple;
 
     font-family: Rubik;
     font-style: normal;
     font-weight: 800;
     font-size: 180px;
     line-height: 30px;
-    color: #242424;
+    color: #FFFFFF;
+    background-color: #FFE17F;
 }
 
 .gadget-slider {
     display: flex;
+    margin-top: -50px;
 }
 
 .slider {
@@ -659,17 +653,12 @@ input::placeholder {
 }
 
 .services-item-button {
-    position: relative;
     font-family: "Raleway", sans-serif;
 
-    width: 160px;
-    font-weight:800;
+    width: 220px;
     font-size: inherit;
-    line-height: 21px;
-    text-align:center;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
     border: none;
+    background-color: transparent;
     z-index: 0;
 }
 
