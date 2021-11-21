@@ -280,6 +280,7 @@ input::placeholder {
     margin: 0;
     padding: 0;
     margin-left: auto;
+    z-index: 2;
 }
 
 .navigation-link {
@@ -334,7 +335,8 @@ input::placeholder {
     left: 0;
     margin: 0;
     flex-basis: 100%;
-    padding-top: 15px;
+    padding-top: 11px;
+    padding-bottom: 15px;
     padding-left: 60px;
     background-color: #FFE17F;
     z-index: 1;
@@ -434,7 +436,7 @@ input::placeholder {
     align-items: center;
     justify-content: flex-end;
     width: 100%;
-    height: 135px;
+    height: 146px;
     margin-left: auto;
     font-family: Rubik;
     font-style: normal;
@@ -457,6 +459,20 @@ input::placeholder {
     border: none;
     background-color: #FFFFFF;
     cursor: pointer;
+    padding: 10px;
+}
+
+.slider:hover {
+    opacity: 0.6;
+}
+
+.slider:focus {
+    border: 2px solid #AF4FFF;
+    border-radius: 5px;
+}
+
+.slider:active {
+    opacity: 0.3;
 }
 
 .slider-next {
@@ -497,20 +513,12 @@ input::placeholder {
 }
 
 .more {
-    position: relative;
     font-family: "Raleway", sans-serif;
     width: 220px;
-    padding: 9.5px 0;
-    line-height: 21px;
-    font-weight: 800;
-    text-align: center;
-    letter-spacing: 0.2em;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #000000;
 }
-
-.device-btn {
+    /*Общая жёлтая и тёмно-жёлтые линии */
+.device-btn,
+.device-btn-service {
     position: relative;
     width: 220px;
     line-height: 21px;
@@ -523,7 +531,8 @@ input::placeholder {
     padding: 9.5px 0;
 }
 
-.device-btn::before {
+.device-btn::before,
+.device-btn-service::before {
     content: "";
     position: absolute;
     top: 50%;
@@ -536,24 +545,29 @@ input::placeholder {
     transition: all 0.3s;
 }
 
-.device-btn:hover::before {
-    font-family: "Raleway", sans-serif;
+.device-btn-service::before {
+    background-color: #FFC700;
+}
+
+.device-btn:hover::before,
+.device-btn-service:hover::before {
     height: 100%;
     top: 0;
     transform: none;
 }
 
-
 /* Слайдеры пагинации */
 
 .slider-pagination {
     display: flex;
+    flex-wrap: wrap;
     padding: 0;
     margin: 0;
     margin-right: 60px;
     justify-content: space-between;
     width: 80px;
     height: 12px;
+    cursor: pointer;
 }
 
 .slider-pagination-item {
@@ -570,6 +584,9 @@ input::placeholder {
     cursor: pointer;
 }
 
+.current-dot {
+    background-color: #000000;
+}
 .slider-pagination-button:focus {
     border: 2px solid #AF4FFF;
 }
@@ -581,7 +598,6 @@ input::placeholder {
 .slider-pagination-button:active {
     opacity: 0.6;
 }
-
 
 /* Характеристики товара */
 
@@ -665,12 +681,6 @@ input::placeholder {
     padding-bottom: 65px;
 }
 
-
-/* .current {
-    background-color: #000000; для Li и для кнопки, и убить псевдокласс
-    color: #FFFFFF;
-} */
-
 .services::before {
     content: '';
     position: absolute;
@@ -709,13 +719,51 @@ input::placeholder {
     background-color: transparent;
     z-index: 0;
 }
+    /* Текущий выбор описания сервиса */
+.current {
+    background-color: #000000;
+    color: #FFE17F;
+
+    position: relative;
+    letter-spacing: 0.2em;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 9.5px 0;
+}
 
 .services-item:not(:first-child) {
     margin-top: 40px;
 }
 
+.services-slide {
+    position: relative;
+    padding-top: 95px;
+}
+
+.services-slide::before {
+    position: absolute;
+    content: '';
+    top: 110px;
+    right: 25px;
+    background: url(../images/services/delivery_man.svg) no-repeat;
+    width: 175px;
+    height: 190px;
+}
+
+.services-slides-header {
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 50px;
+    
+    margin: 0;
+}
+
 .services-slides-item {
-    color: #444444;
+    font-style: normal;
+    font-weight: normal;
+    width: 500px;
 }
 
 
@@ -842,24 +890,11 @@ input::placeholder {
     font-weight: 800;
     font-size: 18px;
     line-height: 21px;
+    letter-spacing: 0.2em;
     font-style: normal;
     color: #000000;
     text-transform: uppercase;
     text-decoration: none;
-}
-
-.button-about-us::before,
-.button-contacts-us::before {
-    content: "";
-    position: absolute;
-    top: 6px;
-    width: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 236px;
-    height: 8px;
-    background-color: #FFE17F;
-    z-index: -1;
 }
 
 .contacts-phone {
@@ -906,11 +941,12 @@ input::placeholder {
 }
 
 .subscribe-form-container {
+    align-items: center;
     margin-top: 50px;
 }
 
 .email-subscribe {
-    font-family: Rubik;
+    font-family: "Rubik", sans-serif;
     font-size: 18px;
     line-height: 30px;
     width: 600px;
@@ -1050,12 +1086,6 @@ input::placeholder {
     margin-left: 130px;
 }
 
-.button {
-    text-decoration: none;
-    color: #000000;
-    margin-top: 50px;
-}
-
 .quadrocopter {
     width: 560px;
 }
@@ -1118,6 +1148,9 @@ input::placeholder {
 /* Хэдэр внутренней страницы */
 
 .inner-header {
+    width: 1160px;
+    margin: 0 auto;
+    padding: 0 60px;
     background-color: #FFFFFF;
 }
 
@@ -1149,38 +1182,39 @@ input::placeholder {
 
 .breadcrumbs {
     display: flex;
-    justify-content: space-between;
-    width: 425px;
     margin: 0;
     padding: 0;
     color: #000000;
     list-style-type: none;
+    opacity: 0.6;
 }
 
-
-/* Link */
+.breadcrumbs-item {
+    display: flex;
+    align-items: center
+}
 
 .breadcrumbs-link {
     color: inherit;
     text-decoration: none;
 }
 
-.catalog-filter-header {
-    font-family: "Raleway", sans-serif;
-    font-style: normal;
-    font-size: 16px;
-    line-height: 19px;
-    color: #000000;
-    text-transform: uppercase;
+.breadcrumbs-arrow {
+    margin: 0 15px;
+    width: 4px;
+    height: 7px;
 }
-
-.control-label {
-    font-family: Rubik;
-    font-style: normal;
-    font-size: 16px;
-    line-height: 19px;
+/* Сортировка по-возрастанию и по-убыванию */
+     /* Общий контейнер для каталога */
+.sorting-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 70px;
+    background-color: #EBEBEB;
+    height: 70px;
 }
-
+    /* Сортировка */
+    /* Заголовок сортировки */
 .sorting-header {
     font-family: "Raleway", sans-serif;
     font-weight: 800;
@@ -1188,32 +1222,42 @@ input::placeholder {
     font-size: 16px;
     line-height: 19px;
     text-transform: uppercase;
-    margin-right: 56px;
+    margin-right: 50px;
+    margin-left: 72px;
+    letter-spacing: 0.2em;
 }
-
-.option-value {
+    /* Селект сортировки */
+.select-control {
     font-family: Rubik;
     font-style: normal;
+    font-weight: normal;
     font-size: 16px;
+    line-height: 19px;
+
+    border: none;
+    background-color: #EBEBEB;
+    padding-right: 15px;
+}
+    /* Одно из значения сортировки */
+.option-value {
+    font-family: "Rubik", sans-serif;
+    font-style: normal;
+    font-size: 16px;
+    font-weight: normal;
     line-height: 19px;
     background-color: #EBEBEB;
 }
-
-
-/* Сортировка по-возрастанию и по-убыванию */
-
-.sorting-container {
-    display: flex;
-    padding: 10px;
-    margin-bottom: 70px;
-    background-color: #EBEBEB;
-    height: 70px;
-}
-
+    /* Возрастание, убывание */
 .button-sort-list {
     display: flex;
     justify-content: space-between;
+    padding: 0;
+    margin: 0;
     margin-left: auto;
+}
+
+.button-sort-up {
+    margin-right: 20px;
 }
 
 
@@ -1269,6 +1313,24 @@ input::placeholder {
 
 
 /*  Фильтры товаров */
+.catalog-filter-header-container {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    height: 70px;
+}
+
+.catalog-filter-header {
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 19px;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin: 0;
+}
 
 .catalog-filter {
     width: 200px;
@@ -1276,6 +1338,9 @@ input::placeholder {
     margin-right: 70px;
 }
 
+.catalog-filter-group:not(:last-child) {
+    margin-bottom: 36px;
+}
 
 /* Заголовок каждого филдсета и контейнер для него */
 
@@ -1283,7 +1348,7 @@ input::placeholder {
     padding-top: 12px;
     width: 200px;
     border-top: 2px solid #000000;
-    margin-bottom: 14px;
+    margin-bottom: 25px;
 }
 
 .catalog-filter-title {
@@ -1299,37 +1364,148 @@ input::placeholder {
 /* Класс для каждого филдсета, 
     чтобы отменить лишние стили */
 
-.filter-group {
-    border: none;
-    padding: 0;
-}
-
-
-/* Цена */
-
-
-/*Цвета */
-
-.catalog-color-list {
-    list-style-type: none;
-    padding: 0;
+.catalog-filter-group { 
     margin: 0;
+    padding: 0;
+    border: none;
 }
 
-.color-control {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    border: 5px solid #000000;
-    border-radius: 3px;
+/* Стоимость */
+
+.range-scale {
+    position: relative;
+    height: 1px;
+    margin-bottom: 15px;
+    border: 1px solid #DCDCDC;
+    background-color: #DCDCDC;
+    border-radius: 2px;
+}
+
+.range-bar {
+    position: absolute;
+    height: 2px;
+    background-color: #000000;
+    top: -1px;
+    left: -1px;
+}
+
+.range-toggle {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background: #EBEBEB;
+    border: 2px solid #242424;
+    border-radius: 50%;
     cursor: pointer;
 }
-
-.catalog-color-group,
-.catalog-bluetooth-group {
-    margin-top: 12px;
+  
+.range-toggle:focus {
+    border-color:  #AF4FFF;
 }
 
+.range-toggle:active {
+    background-color: #000000;
+    border-color: #242424;
+}
+
+.toggle-min {
+    top: -9px;
+    left: -9px;
+}
+  
+.toggle-max {
+    top: -9px;
+    right: -9px;
+}
+
+.range-wrapper-inputs {
+    display: flex;
+    opacity: 0.3;
+}
+
+.range-wrapper-inputs label:first-of-type {
+    margin-right: 45px;
+}
+
+.catalog-filter-label {
+    display: flex;
+}
+
+.range-input {
+    width: 20px;
+    padding: 0 2px;
+    font: inherit;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    appearance: textfield;
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+    /* Цвета */
+.catalog-color-list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+}
+    /* Control */
+.control {
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+    /* Mark */
+.control-mark {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #242424;
+    border-radius: 3px;
+    margin-right: 15px;
+}
+
+.control-input:checked ~ .control-mark {
+    background: url(../images/color-list/check.svg) no-repeat;
+    background-position: center;
+}
+
+    /* Radio */
+.control-input[type="radio"] + .control-mark {
+    background: none;
+    border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked + .control-mark::before {
+    display: flex;    
+    content: "";
+    margin: auto;
+    width: 8px;
+    height: 8px;
+    background: #242424;
+    border-radius: 50%;
+}
+
+    /* Label */
+.control-label {
+    font-family: "Rubik", sans-serif;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.control:hover .control-mark {
+    border-color: #814B18;
+}
+  
+  .control-input:disabled + .control-mark {
+    border-color: #242424;
+}
 
 /* Bluetooth */
 
@@ -1338,6 +1514,20 @@ input::placeholder {
     margin: 0;
 }
 
+    /* Кнопка показать */
+.submit-button {
+    border: none;
+
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    z-index: 1;
+}
 
 /* Товары */
 
@@ -1365,6 +1555,61 @@ bar загрузки и пагинация(нужен для правильно�
 .product-card {
     display: flex;
     flex-direction: column;
+    position: relative;
+}
+
+.product-card-hover {
+    position: relative;
+}
+
+.product-card-image {
+    display: block;
+    transition: all 0.3s;
+    opacity: 1;
+}
+
+.product-card-hover:hover .product-card-image {
+    opacity: 0.8;
+}
+
+.product-card-anchor {
+    display: none;
+    position: absolute;
+    width: 180px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+}
+
+.product-card-hover:hover .product-card-anchor {
+    display: flex;
+}
+
+.product-card-new {
+
+}
+
+.product-card-new::before {
+    content: 'New';
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border: 2px solid rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    top: 25px;
+    right: 25px;
+
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 60px;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+
+    color: rgba(0, 0, 0, 0.6);
 }
 
 .product-card-image {
@@ -1377,10 +1622,6 @@ bar загрузки и пагинация(нужен для правильно�
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-}
-
-.product-card-link {
-    text-decoration: none;
 }
 
 .product-card-title {
@@ -1415,8 +1656,14 @@ bar загрузки и пагинация(нужен для правильно�
     font-weight: 800;
     font-size: 16px;
     line-height: 19px;
+    letter-spacing: 0.2em;
     text-align: center;
+    text-transform: uppercase;
     color: #000000;
+    cursor: pointer;
+    border: none;
+    background: #FFFFFF;
+    border: 3px solid rgba(0, 0, 0, .1);
 }
 
 
@@ -1425,9 +1672,10 @@ bar загрузки и пагинация(нужен для правильно�
 .pagination {
     background-color: #EBEBEB;
     list-style-type: none;
+    padding: 0;
 }
 
-.pagination-link {
+.pagination-link-number {
     font-family: "Rubik", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -1435,19 +1683,25 @@ bar загрузки и пагинация(нужен для правильно�
     line-height: 19px;
     color: #444444;
     text-decoration: none;
+    opacity: 0.3;
 }
 
 .pagination-back,
 .pagination-next {
-    font-family: Raleway;
+    font-family: "Raleway", sans-serif;
     font-style: normal;
     font-weight: 800;
     font-size: 16px;
     line-height: 19px;
+    letter-spacing: 0.2em;
     color: #000000;
     text-transform: uppercase;
 }
 
+.pagination-prev,
+.pagination-next {
+    text-decoration: none;
+}
 
 /* Контейнер для всей пагинации */
 
