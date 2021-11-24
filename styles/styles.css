@@ -325,7 +325,7 @@ input::placeholder {
 .open-menu {
     display: flex;
     align-items: center;
-    font-family: Raleway;
+    font-family: "Raleway", sans-serif;
     font-style: normal;
     font-weight: 800;
     font-size: 18px;
@@ -1594,7 +1594,7 @@ input::placeholder {
 .submit-button {
     border: none;
 
-    font-family: Raleway;
+    font-family: "Raleway", sans-serif;
     font-style: normal;
     font-weight: 800;
     font-size: 18px;
