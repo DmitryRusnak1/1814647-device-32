@@ -55,8 +55,8 @@ body {
     line-height: 30px;
     color: #242424;
     background-color: #FFFFFF;
-    padding-top: 40px;
-    margin: 0;
+    min-width: 1440px;
+    margin: 0 auto;
 }
 
 .visually-hidden {
@@ -69,11 +69,6 @@ body {
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
-
-ul {
-    list-style: none;
-}
-
 
 /* Шапка сайта с навигацией */
 
@@ -189,7 +184,7 @@ ul {
 }
 
 input::placeholder {
-    font-family: Rubik;
+    font-family: "Rubik", sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -224,6 +219,36 @@ input::placeholder {
     position: relative;
 }
 
+.navigation-user-item:first-child::before {
+    content: '';
+    position: absolute;
+    width: 13px;
+    height: 12px;
+    background: url('../images/user-nav/user.svg') no-repeat;
+    top: 10px;
+    left: -10px;
+}
+
+.navigation-user-item:nth-child(2)::before {
+    content: '';
+    position: absolute;
+    width: 13px;
+    height: 12px;
+    background: url('../images/user-nav/compare.svg') no-repeat;
+    top: 10px;
+    left: -4px;
+}
+
+.navigation-user-item:last-child::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 12px;
+    background: url('../images/user-nav/cart.svg') no-repeat;
+    top: 16px;
+    left: -10px;
+}
+
 .navigation-user-link,
 .shop-cart {
     font-family: inherit;
@@ -246,8 +271,8 @@ input::placeholder {
     position: absolute;
     width: 21px;
     height: 21px;
-    top: 12px;
-    left: -1px;
+    top: 14px;
+    left: -26px;
     border-radius: 50%;
     background-color: #FFFFFF;
     margin-right: 10px;
@@ -357,6 +382,7 @@ input::placeholder {
     grid-template-rows: auto;
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
 .dropdown-menu-item:not(:first-child) {
@@ -366,6 +392,7 @@ input::placeholder {
 .dropdown-sublist {
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
 .dropdown-sublist-item {
@@ -373,7 +400,7 @@ input::placeholder {
 }
 
 .dropdown-sublist-link {
-    font-family: Rubik;
+    font-family: "Rubik", sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -431,14 +458,15 @@ input::placeholder {
     margin: 0 auto;
 }
 
-.gadget-slider-number {
+.gadgets-item::before {
+    content: '01';
     display: flex;
     align-items: center;
     justify-content: flex-end;
     width: 100%;
     height: 146px;
     margin-left: auto;
-    font-family: Rubik;
+    font-family: "Rubik", sans-serif;
     font-style: normal;
     font-weight: 800;
     font-size: 180px;
@@ -458,6 +486,7 @@ input::placeholder {
     transform: translateY(-50%);
     border: none;
     background-color: #FFFFFF;
+    border: 2px solid transparent;
     cursor: pointer;
     padding: 10px;
 }
@@ -603,9 +632,7 @@ input::placeholder {
 
 .stats-list {
     display: flex;
-}
-
-.stats-list {
+    flex-wrap: wrap;
     margin-top: 70px;
 }
 
@@ -638,9 +665,10 @@ input::placeholder {
 .product-types-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     padding: 0;
     margin: 0;
+    list-style: none;
 }
 
 .product-types-picture {
@@ -650,6 +678,10 @@ input::placeholder {
     width: 160px;
     height: 160px;
     background-color: #FFE17F;
+}
+
+.product-types-item:not(:last-child) {
+    padding-right: 40px;
 }
 
 .product-types-name-box {
@@ -685,10 +717,11 @@ input::placeholder {
     content: '';
     position: absolute;
     width: 100%;
-    height: 280px;
+    min-height: 280px;
     background: #F0F0F0;
     z-index: -1;
     bottom: 0;
+    top: 100px;
 }
 
 .services-container {
@@ -702,8 +735,9 @@ input::placeholder {
     margin: 0;
     padding: 0;
     padding-top: 80px;
-    padding-bottom: 40px;
+    padding-bottom: 71px;
     border-right: 7px solid #000000;
+    list-style: none;
 }
 
 .services-slides {
@@ -713,7 +747,7 @@ input::placeholder {
 
 .services-item-button {
     font-family: "Raleway", sans-serif;
-    width: 220px;
+    width: 160px;
     font-size: inherit;
     border: none;
     background-color: transparent;
@@ -728,23 +762,23 @@ input::placeholder {
     letter-spacing: 0.2em;
     text-decoration: none;
     text-transform: uppercase;
-    padding: 9.5px 0;
+    padding: 4.5px 0;
 }
 
 .services-item:not(:first-child) {
-    margin-top: 40px;
+    margin-top: 25px;
 }
 
 .services-slide {
     position: relative;
-    padding-top: 95px;
+    padding-top: 75px;
 }
 
 .services-slide::before {
     position: absolute;
     content: '';
-    top: 110px;
-    right: 25px;
+    top: 84px;
+    right: 29px;
     background: url(../images/services/delivery_man.svg) no-repeat;
     width: 175px;
     height: 190px;
@@ -758,12 +792,14 @@ input::placeholder {
     line-height: 50px;
     
     margin: 0;
+    margin-top: -4px;
 }
 
 .services-slides-item {
     font-style: normal;
     font-weight: normal;
     width: 500px;
+    margin-top: 32px;
 }
 
 
@@ -782,12 +818,23 @@ input::placeholder {
 }
 
 .special-delivery-pic {
+    position: relative;
     width: 125px;
     height: 100px;
     background-color: #FFE17F;
     text-align: center;
     padding: 35px 39px 34px 39px;
     margin: 0;
+}
+
+.special-delivery-pic::after {
+    position: absolute;
+    content: '';
+    width: 47px;
+    height: 31.1px;
+    background: url('../images/delivery_car.svg') no-repeat;
+    top: 34px;
+    left: 37px;
 }
 
 .special-delivery-service {
@@ -807,8 +854,8 @@ input::placeholder {
     height: 40px;
     padding: 0;
     margin: 29px 33px 31px 52px;
+    background: url(../images/info.svg) no-repeat;
 }
-
 
 /* О нас и контакты  */
 
@@ -970,16 +1017,22 @@ input::placeholder {
 }
 
 .subscribe-free {
+    position: relative;
     width: 164px;
     font-style: normal;
     font-weight: normal;
+    margin-right: -35px;
 }
 
-.subscribe-free-icon {
-    margin-right: 20px;
+.subscribe-free::before {
+    content: '';
+    position: absolute;
+    background: url('../images/check_mark.svg') no-repeat;
+    width: 14px;
+    height: 14px;
+    left: -36px;
+    bottom: 8px;
 }
-
-
 /* Футер */
 
 .page-footer {
@@ -1191,19 +1244,39 @@ input::placeholder {
 
 .breadcrumbs-item {
     display: flex;
-    align-items: center
+    position: relative;
+    align-items: center;
+    margin-right: 34px;
+}
+
+.breadcrumbs-item:first-child::after {
+    content: '';
+    position: absolute;
+    width: 3.97px;
+    height: 7.05px;
+    background: url(../images/breadcrumbs/Vector.svg) no-repeat;
+    right: -20px;
+}
+
+.breadcrumbs-item:nth-child(2)::after {
+    content: '';
+    position: absolute;
+    width: 3.97px;
+    height: 7.05px;
+    background: url(../images/breadcrumbs/Vector.svg) no-repeat;
+    right: -20px;
 }
 
 .breadcrumbs-link {
     color: inherit;
     text-decoration: none;
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
 }
 
-.breadcrumbs-arrow {
-    margin: 0 15px;
-    width: 4px;
-    height: 7px;
-}
 /* Сортировка по-возрастанию и по-убыванию */
      /* Общий контейнер для каталога */
 .sorting-container {
@@ -1228,7 +1301,7 @@ input::placeholder {
 }
     /* Селект сортировки */
 .select-control {
-    font-family: Rubik;
+    font-family: "Rubik", sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -1254,6 +1327,7 @@ input::placeholder {
     padding: 0;
     margin: 0;
     margin-left: auto;
+    list-style: none;
 }
 
 .button-sort-up {
@@ -1358,8 +1432,9 @@ input::placeholder {
     font-size: 18px;
     line-height: 20px;
     color: #000000;
-}
 
+    margin-bottom: 15px;
+}
 
 /* Класс для каждого филдсета, 
     чтобы отменить лишние стили */
@@ -1449,7 +1524,7 @@ input::placeholder {
 
     /* Цвета */
 .catalog-color-list {
-        list-style-type: none;
+        list-style: none;
         padding: 0;
         margin: 0;
 }
@@ -1512,6 +1587,7 @@ input::placeholder {
 .bluetooth-list {
     padding: 0;
     margin: 0;
+    list-style: none;
 }
 
     /* Кнопка показать */
@@ -1670,9 +1746,18 @@ bar загрузки и пагинация(нужен для правильно�
 /* Пагинация */
 
 .pagination {
+    display: flex;
+    flex-wrap: wrap;
+    width: 166px;
     background-color: #EBEBEB;
     list-style-type: none;
     padding: 0;
+    margin: 0;
+    margin-left: 63px;
+}
+
+.pagination-item:not(:last-child) {
+    margin-right: 26px;
 }
 
 .pagination-link-number {
@@ -1714,6 +1799,7 @@ bar загрузки и пагинация(нужен для правильно�
     margin-top: 50px;
     margin-bottom: 77px;
     background-color: #EBEBEB;
+    padding: 20px 0
 }
 
 .pagination-item-back {
@@ -1721,11 +1807,5 @@ bar загрузки и пагинация(нужен для правильно�
 }
 
 .pagination-item-next {
-    margin-right: 30px;
-}
-
-.pagination {
-    display: flex;
-    justify-content: space-between;
-    width: 166px;
+    margin-right: 26px;
 }
